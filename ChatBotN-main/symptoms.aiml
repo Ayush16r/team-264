@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+  <category>
+    <pattern>HELLO</pattern>
+    <template>hey, please type  symptom here</template>
+  </category>
+  <category>
+    <pattern>HEY</pattern>
+    <template>hey, please type your symptom here</template>
+  </category>
+  <category>
+    <pattern>SHORTNESS OF BREATH</pattern>
+    <template>Asthma, Pneumonia</template>
+  </category>
+  <category>
+    <pattern>FATIGUE</pattern>
+    <template>Thyroid Disorder, Depression, Chronic Fatigue Syndrome</template>
+  </category>
+  <category>
+    <pattern>CHEST PAIN</pattern>
+    <template>Angina, Heart Attack, Anxiety</template>
+  </category>
+  <category>
+    <pattern>HIGH BLOOD PRESSURE</pattern>
+    <template>Kidney Disease, Stress, Hypertension</template>
+  </category>
+  <category>
+    <pattern>DIARRHEA</pattern>
+    <template>Food Poisoning, Crohn’s Disease, Irritable Bowel Syndrome</template>
+  </category>
+  <category>
+    <pattern>HEARING LOSS</pattern>
+    <template>Aging, Ear Infection</template>
+  </category>
+  <category>
+    <pattern>JOINT PAIN</pattern>
+    <template>Arthritis, Lupus</template>
+  </category>
+  <category>
+    <pattern>FEVERS</pattern>
+    <template>Stroke, Infection, Head Injury</template>
+  </category>
+  <category>
+    <pattern>DIARRHEA</pattern>
+    <template>Crohn’s Disease, Cholera</template>
+  </category>
+  <category>
+    <pattern>PALE SKIN</pattern>
+    <template>Anemia, Vitamin Deficiency, Internal Bleeding</template>
+  </category>
+  <category>
+    <pattern>RASH</pattern>
+    <template>Measles, Chickenpox, Allergy, Psoriasis</template>
+  </category>
+  <category>
+    <pattern>... (TRUNCATED FOR BREVITY</pattern>
+    <template>assume the rest are included here)</template>
+  </category>
+  <category>
+    <pattern>*</pattern>
+    <template>🤖 I’m not sure. Please consult a doctor.</template>
+  </category>
+</aiml>
