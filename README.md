@@ -5,6 +5,7 @@ It provides a live-updating patient dashboard, appointment booking system, admin
 
 🚀 Features
 👨‍⚕️ Patient Dashboard
+https://github.com/Ayush16r/team-264/tree/main/USER-dashboard
 
 Live updates on patient queue.
 
@@ -13,6 +14,10 @@ Booking ID search to see slot, name, and estimated waiting time.
 Sidebar with quick access: Hospitals near me, Medicine bar, Visit notes, etc.
 
 📅 Appointment Booking
+https://github.com/Ayush16r/team-264/tree/main/appointmernt%20booking%20server%20local%20host
+
+or url  
+https://medifind-dtfh.onrender.com
 
 Patients can book appointments with name, department, and slot.
 
@@ -21,6 +26,7 @@ Stores data in MongoDB Atlas.
 Auto-generates a unique Booking ID.
 
 🔑 Admin Dashboard
+https://github.com/Ayush16r/team-264/tree/main/admin%20testing
 
 View all booked appointments.
 
