@@ -112,7 +112,8 @@ step 2 - click on live appointment
  step 3-            ( on search location must use 
                       Bhubaneswar OR downtown )
 
-                     ![alt text](image-1.png)
+                     
+![alt text](image-1.png)
                      
 step 3-              copy booking id
 
