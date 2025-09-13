@@ -1,83 +1,107 @@
-City Medical Center – Real-time Appointment Management System
+HealX – Patient Dashboard (Live Updates)
 
-A real-time hospital appointment and queue management system built with Flask, MongoDB, and Server-Sent Events (SSE).
-It allows hospital staff to:
-
-📋 Search and add patients to the live queue
-
-⏳ Monitor queue length & estimated wait times
-
-👩‍⚕️ Track currently serving patients
-
-✅ Mark visits as complete and auto-assign next patient
-
-📡 Live updates without page reloads
+HealX is a healthcare web application designed to reduce patient waiting time and improve appointment management through real-time live updates, queue monitoring, and AI assistance.
 
 🚀 Features
 
-Search by Booking ID to add patient into the queue
+📊 Live Updates – Patients can check their queue position and estimated waiting time.
 
-Real-time dashboard with Server-Sent Events (SSE)
+🧾 Booking Search – Enter Booking ID to fetch appointment details instantly.
 
-Queue statistics: length, estimated wait, patients served today
+⏳ Estimated Wait Time – Calculates based on department and patients ahead in queue.
 
-Department-wise service times (e.g., Cardiology 15 mins, General 10 mins)
+🏥 Hospitals Near Me – Quick access to nearby hospitals.
 
-Current patient view with "Complete Visit" button
+💊 Medicine Box – Store and view prescribed medicines.
 
-Auto-assign next patient when one is completed
+🎯 Feedback & Rewards – Collect patient feedback and reward engagement.
 
-MongoDB integration for persistence
+🤖 AI Assistant – Integrated chatbot assistant (via external link).
+
+📱 Responsive UI – Built with Tailwind CSS and custom styles.
+
+🛠 Tech Stack
+
+Frontend: HTML, Tailwind CSS, JavaScript
+
+Backend: Flask (Python)
+
+Database: MongoDB Atlas (Cloud)
+
+Styling: TailwindCSS + Custom CSS
+
+Hosting: Compatible with Flask hosting services (Render, Heroku, etc.)
 
 📂 Project Structure
-.
-├── app.py                # Flask backend
-├── templates/
-│   └── index.html        # Dashboard UI
+HealX/
+│
 ├── static/
-│   ├── style.css         # Styling
-│   └── main.js           # Frontend logic (SSE + fetch APIs)
-└── README.md             # Documentation
+│   ├── style.css        # Custom styles
+│   ├── trail.js         # Live booking fetch logic
+│
+├── templates/
+│   ├── index.html       # Main dashboard
+│   ├── live_appointments.html
+│   ├── hospitals_near_me.html
+│   ├── med_box.html
+│   ├── feedback_reward.html
+│
+├── user.py              # Flask app & API routes
+├── README.md            # Project documentation
 
-⚡ Installation & Setup
-1️⃣ Clone the repo
-git clone https://github.com/Ayush16r/team-264/tree/main/ChatBotN-main
-cd hospital-queue-system
+⚙️ Setup & Installation
 
-2️⃣ Create virtual environment
+Clone the repository
+
+git clone https://github.com/your-username/healx.git
+cd healx
+
+
+Create a virtual environment
+
 python -m venv venv
 source venv/bin/activate   # Mac/Linux
 venv\Scripts\activate      # Windows
 
-3️⃣ Install dependencies
+
+Install dependencies
+
 pip install flask pymongo
 
-4️⃣ Set up MongoDB
 
-Use a local MongoDB or Atlas cloud database.
+Add MongoDB connection
+In user.py, update the MongoDB URI with your own:
 
-Create a DB and collection (default: mydb.appointments).
-
-Update your MongoDB URI in app.py if needed:
-
-MONGODB_URI = "your-mongodb-uri"
-DB_NAME = "mydb"
-COLL = "appointments"
-
-5️⃣ Run the app
-python app.py
+MONGO_URI = "your-mongo-uri-here"
 
 
-Visit 👉 http://127.0.0.1:5000/
+Run the Flask app
 
-💻 Usage Example
+python user.py
 
-Search for a Booking ID → patient is added to queue.
 
-The system auto-assigns the first patient as Currently Serving.
+App will run at: http://127.0.0.1:5000/
 
-Staff clicks Complete Visit → patient is marked completed, next one auto-starts.
+📊 Database Schema (MongoDB – bookings Collection)
 
-Queue stats update instantly (via SSE).
-![alt text](image.png)
+Each booking document looks like:
 
+{
+  "booking_id": "B12345",
+  "patient_name": "John Doe",
+  "department": "General Medicine",
+  "appointment_time": "2025-09-15T10:30:00",
+  "status": "pending",   // or "completed"
+  "created_at": ISODate("2025-09-13T09:00:00")
+}
+
+🔮 Future Improvements
+
+✅ Admin dashboard for managing bookings
+
+✅ Notifications (SMS/Email reminders)
+
+✅ Better AI integration with patient medical history
+
+![alt text](image-1.png)
+![alt text](image-2.png)
